@@ -1,0 +1,16 @@
+  MdiClient oMDI;
+            foreach (Control ctl in this.Controls)
+            {
+                try
+                {
+                    // Intentamos castear el objeto MdiClient
+                    oMDI = (MdiClient)ctl;
+
+                    // Cuando sea casteado con éxito, podremos cambiar el color así
+                    oMDI.BackColor = Color.FromArgb(26, 32, 40);
+                }
+                catch (InvalidCastException exc)
+                {
+                    // No hacemos nada cuando el control no sea tupo MdiClient
+                }
+            }
